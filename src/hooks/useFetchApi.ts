@@ -13,7 +13,7 @@ const useFetchApi = (value: string, trigerApi: boolean, ApiUrl: string) => {
       try {
         setIsLoading(true);
         const responce = await axios.get(ApiUrl + value);
-        console.log(responce);
+
         if (responce.data.success === false) {
           setError({ type: 400, messge: "please provide valide input" });
         } else {
@@ -21,7 +21,7 @@ const useFetchApi = (value: string, trigerApi: boolean, ApiUrl: string) => {
           setData(responce.data);
         }
       } catch (e: any) {
-        setError({ type: 500, messge: "" });
+        setError({ type: 500, messge: JSON.stringify(e) });
       } finally {
         setIsLoading(false);
       }

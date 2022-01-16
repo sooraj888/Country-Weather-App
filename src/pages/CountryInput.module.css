@@ -2,4 +2,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+.form > input {
+  padding: 20px;
+  min-width: 300px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.form > button {
+  margin: 20px;
+  padding: 10px;
+  min-width: 80px;
 }
